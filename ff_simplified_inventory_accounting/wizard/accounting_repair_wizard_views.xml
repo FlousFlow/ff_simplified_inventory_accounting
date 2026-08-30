@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ff_accounting_repair_wizard_form" model="ir.ui.view">
+        <field name="name">ff.accounting.repair.wizard.form</field>
+        <field name="model">ff.accounting.repair.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Apply Simplified Accounting to Existing Categories">
+                <group>
+                    <group>
+                        <field name="total_categories"/>
+                        <field name="configured_count"/>
+                        <field name="missing_income_count"/>
+                        <field name="missing_expense_count"/>
+                    </group>
+                    <group>
+                        <field name="missing_input_count"/>
+                        <field name="missing_output_count"/>
+                        <field name="missing_valuation_count"/>
+                        <field name="missing_journal_count"/>
+                        <field name="manual_valuation_count"/>
+                        <field name="diff_cost_method_count"/>
+                    </group>
+                </group>
+                <group string="Repair plan">
+                    <field name="repair_info" nolabel="1"/>
+                </group>
+                <footer>
+                    <button name="action_repair" type="object"
+                            string="Run Safe Accounting Repair"
+                            class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

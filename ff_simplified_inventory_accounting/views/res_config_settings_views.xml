@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_ff_simplified" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.ff_simplified</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@name='audit_trail_setting_container']" position="after">
+                <block title="Simplified Inventory Accounting"
+                       name="ff_simplified_inventory_container">
+                    <setting string="Enable Simplified Inventory Accounting"
+                             company_dependent="1"
+                             help="Automatically configure inventory accounting for product categories. Users only need to select Sales and Cost of Goods Sold accounts.">
+                        <field name="ff_simplified_inventory_accounting"/>
+                        <div class="alert alert-info o_setting_box" role="alert"
+                             invisible="not ff_simplified_inventory_accounting">
+                            <p>
+                                Inventory valuation and stock interim accounts are
+                                managed automatically by the company accounting
+                                settings.
+                            </p>
+                        </div>
+                    </setting>
+
+                    <setting string="User Defaults" company_dependent="1">
+                        <div class="content-group">
+                            <div class="row">
+                                <label for="ff_default_income_account_id"
+                                       string="Default Sales Account"/>
+                                <field name="ff_default_income_account_id"
+                                       placeholder="Sales Revenue"/>
+                            </div>
+                            <div class="row">
+                                <label for="ff_default_cogs_account_id"
+                                       string="Default Cost of Goods Sold Account"/>
+                                <field name="ff_default_cogs_account_id"
+                                       placeholder="Cost of Goods Sold"/>
+                            </div>
+                            <div class="row">
+                                <label for="ff_default_cost_method"
+                                       string="Default Costing Method"/>
+                                <field name="ff_default_cost_method"/>
+                            </div>
+                        </div>
+                    </setting>
+
+                    <setting string="Advanced Technical Configuration"
+                             company_dependent="1"
+                             groups="account.group_account_manager"
+                             help="Configured once per company. Applied automatically to every product category.">
+                        <div class="content-group">
+                            <div class="row">
+                                <label for="ff_stock_valuation_account_id"
+                                       string="Stock Valuation Account"/>
+                                <field name="ff_stock_valuation_account_id"
+                                       placeholder="Stock Valuation"/>
+                            </div>
+                            <div class="row">
+                                <label for="ff_stock_input_account_id"
+                                       string="Stock Interim Received Account"/>
+                                <field name="ff_stock_input_account_id"
+                                       placeholder="Stock Interim Received"/>
+                            </div>
+                            <div class="row">
+                                <label for="ff_stock_output_account_id"
+                                       string="Stock Interim Delivered Account"/>
+                                <field name="ff_stock_output_account_id"
+                                       placeholder="Stock Interim Delivered"/>
+                            </div>
+                            <div class="row">
+                                <label for="ff_stock_journal_id"
+                                       string="Stock Journal"/>
+                                <field name="ff_stock_journal_id"
+                                       placeholder="Stock Journal"/>
+                            </div>
+                            <div class="row mt16">
+                                <button name="ff_action_use_existing_config"
+                                        type="object"
+                                        string="Use Existing Inventory Accounting Configuration"
+                                        class="btn-link"/>
+                            </div>
+                            <div class="row">
+                                <button name="ff_action_create_technical_accounts"
+                                        type="object"
+                                        string="Create Technical Inventory Accounts"
+                                        class="btn-link"/>
+                            </div>
+                        </div>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

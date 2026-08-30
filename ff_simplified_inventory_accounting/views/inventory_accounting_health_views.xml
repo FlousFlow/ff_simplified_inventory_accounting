@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Administrative audit screen: inventory accounting health check. -->
+    <record id="inventory_accounting_health_tree" model="ir.ui.view">
+        <field name="name">product.category.health.tree</field>
+        <field name="model">product.category</field>
+        <field name="arch" type="xml">
+            <list string="Inventory Accounting Health Check">
+                <field name="name"/>
+                <field name="ff_accounting_status" string="Status" widget="badge"
+                       decoration-success="ff_accounting_status == 'configured'"
+                       decoration-info="ff_accounting_status == 'custom'"
+                       decoration-danger="ff_accounting_status == 'warning'"/>
+                <field name="property_account_income_categ_id" string="Sales Account"/>
+                <field name="property_account_expense_categ_id" string="COGS Account"/>
+                <field name="property_cost_method" string="Costing Method"/>
+                <field name="property_valuation" string="Inventory Valuation"/>
+                <!-- Advanced technical columns, hidden from ordinary users. -->
+                <field name="property_stock_valuation_account_id"
+                       string="Stock Valuation"
+                       groups="account.group_account_manager" optional="hide"/>
+                <field name="property_stock_account_input_categ_id"
+                       string="Stock Input"
+                       groups="account.group_account_manager" optional="hide"/>
+                <field name="property_stock_account_output_categ_id"
+                       string="Stock Output"
+                       groups="account.group_account_manager" optional="hide"/>
+                <field name="property_stock_journal"
+                       string="Stock Journal"
+                       groups="account.group_account_manager" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="inventory_accounting_health_search" model="ir.ui.view">
+        <field name="name">product.category.health.search</field>
+        <field name="model">product.category</field>
+        <field name="arch" type="xml">
+            <search string="Inventory Accounting Health Check">
+                <field name="name"/>
+                <filter name="ff_show_health" string="Health Check"
+                        domain="[]"/>
+                <separator/>
+                <filter name="ff_missing_income" string="Missing Sales"
+                        domain="[('property_account_income_categ_id', '=', False)]"/>
+                <filter name="ff_missing_expense" string="Missing COGS"
+                        domain="[('property_account_expense_categ_id', '=', False)]"/>
+                <filter name="ff_missing_input" string="Missing Stock Input"
+                        domain="[('property_valuation', '=', 'real_time'), ('property_stock_account_input_categ_id', '=', False)]"/>
+                <filter name="ff_missing_output" string="Missing Stock Output"
+                        domain="[('property_valuation', '=', 'real_time'), ('property_stock_account_output_categ_id', '=', False)]"/>
+                <filter name="ff_missing_valuation" string="Missing Stock Valuation"
+                        domain="[('property_valuation', '=', 'real_time'), ('property_stock_valuation_account_id', '=', False)]"/>
+                <filter name="ff_missing_journal" string="Missing Stock Journal"
+                        domain="[('property_valuation', '=', 'real_time'), ('property_stock_journal', '=', False)]"/>
+                <filter name="ff_manual_valuation" string="Manual Valuation"
+                        domain="[('property_valuation', '=', 'manual_periodic')]"/>
+                <filter name="ff_custom_accounting" string="Custom Accounting"
+                        domain="[('ff_accounting_status', '=', 'custom')]"/>
+                <filter name="ff_healthy" string="Healthy"
+                        domain="[('ff_accounting_status', '=', 'configured')]"/>
+                <group expand="0" string="Group By">
+                    <filter name="ff_group_status" string="Status"
+                            context="{'group_by': 'ff_accounting_status'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- The action is defined after the views it references so that the ref()
+         lookups resolve correctly on a fresh install. -->
+    <record id="action_inventory_accounting_health" model="ir.actions.act_window">
+        <field name="name">Inventory Accounting Health Check</field>
+        <field name="res_model">product.category</field>
+        <field name="view_mode">list</field>
+        <field name="context">{'search_default_ff_show_health': 1}</field>
+        <field name="groups_id" eval="[(4, ref('account.group_account_manager'))]"/>
+        <field name="view_ids" eval="[(5, 0, 0), (0, 0, {'view_mode': 'list', 'view_id': ref('inventory_accounting_health_tree')})]"/>
+        <field name="search_view_id" ref="inventory_accounting_health_search"/>
+    </record>
+
+    <!-- Menus (accounting managers). -->
+    <menuitem id="menu_ff_simplified_container"
+              name="Simplified Inventory Accounting"
+              parent="stock.menu_stock_config_settings"
+              groups="account.group_account_manager"
+              sequence="90"/>
+    <menuitem id="menu_ff_inventory_health"
+              name="Inventory Accounting Health Check"
+              parent="menu_ff_simplified_container"
+              action="action_inventory_accounting_health"
+              sequence="10"/>
+
+    <!-- Actions to launch the wizards from the health screen. -->
+    <record id="action_ff_repair_wizard" model="ir.actions.act_window">
+        <field name="name">Apply Simplified Accounting to Existing Categories</field>
+        <field name="res_model">ff.accounting.repair.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="groups_id" eval="[(4, ref('account.group_account_manager'))]"/>
+    </record>
+    <menuitem id="menu_ff_repair"
+              name="Apply Simplified Accounting to Existing Categories"
+              parent="menu_ff_simplified_container"
+              action="action_ff_repair_wizard"
+              sequence="20"/>
+    <record id="action_ff_migration_wizard" model="ir.actions.act_window">
+        <field name="name">Accounting / Valuation Migration</field>
+        <field name="res_model">ff.accounting.migration.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="groups_id" eval="[(4, ref('account.group_account_manager'))]"/>
+    </record>
+    <menuitem id="menu_ff_migration"
+              name="Accounting / Valuation Migration"
+              parent="menu_ff_simplified_container"
+              action="action_ff_migration_wizard"
+              sequence="30"/>
+</odoo>

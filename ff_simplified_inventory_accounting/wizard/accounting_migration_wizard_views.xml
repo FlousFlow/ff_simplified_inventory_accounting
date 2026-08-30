@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ff_accounting_migration_wizard_form" model="ir.ui.view">
+        <field name="name">ff.accounting.migration.wizard.form</field>
+        <field name="model">ff.accounting.migration.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Accounting / Valuation Migration">
+                <group>
+                    <field name="category_ids" widget="many2many_tags"/>
+                    <field name="target_cost_method"/>
+                    <field name="target_valuation"/>
+                </group>
+                <group string="Safety check">
+                    <group>
+                        <field name="products_count"/>
+                        <field name="stock_quantity"/>
+                        <field name="svl_count"/>
+                        <field name="lot_valuated_count"/>
+                    </group>
+                    <div class="alert alert-warning" role="alert"
+                         invisible="migration_safe">
+                        <field name="safety_message" nolabel="1"/>
+                    </div>
+                    <div class="alert alert-info" role="alert"
+                         invisible="not migration_safe">
+                        <field name="safety_message" nolabel="1"/>
+                    </div>
+                </group>
+                <footer>
+                    <button name="action_migrate" type="object"
+                            string="Migrate"
+                            class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

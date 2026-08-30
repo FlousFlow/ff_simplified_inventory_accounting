@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_company_form_ff_simplified" model="ir.ui.view">
+        <field name="name">res.company.view.form.inherit.ff_simplified</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <page name="branches" position="after">
+                <page string="Simplified Inventory Accounting"
+                      name="ff_simplified_inventory_accounting"
+                      groups="account.group_account_manager">
+                    <group>
+                        <group>
+                            <field name="ff_simplified_inventory_accounting"/>
+                            <field name="ff_default_income_account_id"
+                                   string="Default Sales Account"/>
+                            <field name="ff_default_cogs_account_id"
+                                   string="Default Cost of Goods Sold Account"/>
+                            <field name="ff_default_cost_method"
+                                   string="Default Costing Method"/>
+                        </group>
+                        <group>
+                            <field name="ff_stock_valuation_account_id"
+                                   string="Stock Valuation Account"/>
+                            <field name="ff_stock_input_account_id"
+                                   string="Stock Interim Received Account"/>
+                            <field name="ff_stock_output_account_id"
+                                   string="Stock Interim Delivered Account"/>
+                            <field name="ff_stock_journal_id"
+                                   string="Stock Journal"/>
+                        </group>
+                    </group>
+                </page>
+            </page>
+        </field>
+    </record>
+</odoo>

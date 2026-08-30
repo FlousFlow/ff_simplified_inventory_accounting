@@ -1,0 +1,60 @@
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="text-center">
+            <img src="thumbnail.png" alt="Simplified Inventory Accounting"
+                 style="max-width: 100%; border-radius: 8px;"/>
+        </div>
+        <h2 class="oe_slogan">Simplified Inventory Accounting for Odoo 18</h2>
+        <h3 class="oe_slogan">Odoo 19-like product category accounting, with Odoo's native accounting engine</h3>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h4 class="oe_slogan">The problem</h4>
+        <p class="text-center">
+            In Odoo 18 a Product Category exposes many technical stock-accounting
+            fields: Inventory Valuation, Costing Method, Stock Journal, Stock
+            Input / Output / Valuation accounts. Forgetting to configure them
+            leads to incorrect stock valuation and broken accounting.
+        </p>
+        <h4 class="oe_slogan">The solution</h4>
+        <p class="text-center">
+            The user only selects <b>Sales Account</b>, <b>Cost of Goods Sold</b>
+            and optionally a <b>Costing Method</b>. Everything else is configured
+            automatically from a central per-company configuration. Odoo keeps
+            creating the accounting entries &mdash; no duplicate engine.
+        </p>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h4 class="oe_slogan">Key benefits</h4>
+        <ul>
+            <li>Simpler Product Category configuration</li>
+            <li>Automatic technical stock accounting</li>
+            <li>Prevents missing inventory accounts</li>
+            <li>Works for new and existing categories</li>
+            <li>Centralized per-company configuration</li>
+            <li>Multi-company support with full isolation</li>
+            <li>Preserves the standard Odoo accounting engine</li>
+            <li>Accounting Status + Health Check for easy audit</li>
+        </ul>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h4 class="oe_slogan">Installation</h4>
+        <pre><code>odoo -d DB_NAME -i ff_simplified_inventory_accounting --stop-after-init</code></pre>
+        <p>Then configure under <b>Settings &rarr; Invoicing &rarr; Simplified Inventory Accounting</b>.</p>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h4 class="oe_slogan">License</h4>
+        <p class="text-center">LGPL-3 &mdash; Flous Flow</p>
+    </div>
+</section>

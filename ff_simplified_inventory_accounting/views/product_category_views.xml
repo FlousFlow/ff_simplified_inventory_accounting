@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+      Simplified product category form.
+      When the feature is enabled for the current company, the native technical
+      stock-accounting fields are hidden and a clean "Accounting" section is
+      shown instead. When disabled, the standard Odoo 18 behavior is restored.
+    -->
+    <record id="view_category_property_form_ff_simplified" model="ir.ui.view">
+        <field name="name">product.category.property.form.inherit.ff_simplified</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="account.view_category_property_form"/>
+        <field name="arch" type="xml">
+
+            <!-- Hide the native income / expense accounts in simplified mode
+                 (they are re-shown in the ff section below). -->
+            <field name="property_account_income_categ_id" position="attributes">
+                <attribute name="invisible">ff_simplified_enabled</attribute>
+            </field>
+            <field name="property_account_expense_categ_id" position="attributes">
+                <attribute name="invisible">ff_simplified_enabled</attribute>
+            </field>
+
+            <!-- Simplified "Accounting" section. -->
+            <group name="account_property" position="after">
+                <group name="ff_simplified_accounting" string="Accounting"
+                       invisible="not ff_simplified_enabled">
+                    <field name="ff_simplified_enabled" invisible="1"/>
+                    <field name="property_account_income_categ_id"
+                           string="Sales Account"
+                           placeholder="Sales Revenue"
+                           options="{'no_create': True}"
+                           help="Revenue from products in this category will use this account unless overridden on the product."/>
+                    <field name="property_account_expense_categ_id"
+                           string="Cost of Goods Sold"
+                           placeholder="Cost of Goods Sold"
+                           options="{'no_create': True}"
+                           help="This is the category expense / COGS account used by Odoo's standard accounting logic."/>
+                    <field name="property_cost_method" string="Costing Method"/>
+                    <field name="property_stock_valuation_account_id"
+                           string="Stock Valuation Account"
+                           placeholder="Stock Valuation"
+                           options="{'no_create': True}"
+                           help="The account holding the value of this category's stock. It is set automatically from the company configuration; you may override it for this category only."/>
+                    <field name="ff_accounting_status" widget="badge"
+                           decoration-success="ff_accounting_status == 'configured'"
+                           decoration-info="ff_accounting_status == 'custom'"
+                           decoration-danger="ff_accounting_status == 'warning'"/>
+                    <div class="text-muted">
+                        The stock valuation account defaults from the company
+                        accounting settings and can be changed per category.
+                        Stock interim accounts and the stock journal remain
+                        automatic.
+                    </div>
+                </group>
+            </group>
+
+        </field>
+    </record>
+
+    <!-- Hide the technical stock accounting properties in simplified mode. -->
+    <record id="product_category_stock_property_form_ff_simplified" model="ir.ui.view">
+        <field name="name">product.category.stock.property.form.inherit.ff_simplified</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="stock_account.view_category_property_form"/>
+        <field name="arch" type="xml">
+            <group name="account_stock_property" position="attributes">
+                <attribute name="invisible">ff_simplified_enabled or property_valuation == 'manual_periodic'</attribute>
+            </group>
+        </field>
+    </record>
+
+    <!-- Hide the native "Inventory Valuation" group (cost method + valuation)
+         in simplified mode; both are shown in the ff section instead. -->
+    <record id="product_category_stock_cost_form_ff_simplified" model="ir.ui.view">
+        <field name="name">product.category.stock.cost.form.inherit.ff_simplified</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="stock_account.view_category_property_form_stock"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[field[@name='property_cost_method']]" position="attributes">
+                <attribute name="invisible">ff_simplified_enabled</attribute>
+            </xpath>
+            <field name="property_cost_method" position="attributes">
+                <attribute name="invisible">ff_simplified_enabled</attribute>
+            </field>
+            <field name="property_valuation" position="attributes">
+                <attribute name="invisible">ff_simplified_enabled</attribute>
+            </field>
+        </field>
+    </record>
+
+    <!-- Status column on the standard category list. -->
+    <record id="product_category_list_view_ff_simplified" model="ir.ui.view">
+        <field name="name">product.category.list.inherit.ff_simplified</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="product.product_category_list_view"/>
+        <field name="arch" type="xml">
+            <field name="display_name" position="after">
+                <field name="ff_accounting_status" string="Accounting Status"
+                       widget="badge" optional="hide"/>
+            </field>
+        </field>
+    </record>
+
+    <!-- Search filters on the standard category search view. -->
+    <record id="product_category_search_view_ff_simplified" model="ir.ui.view">
+        <field name="name">product.category.search.inherit.ff_simplified</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="product.product_category_search_view"/>
+        <field name="arch" type="xml">
+            <field name="parent_id" position="after">
+                <filter name="group_ff_status" string="Accounting Status"
+                        context="{'group_by': 'ff_accounting_status'}"/>
+            </field>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,759 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ff_simplified_inventory_accounting
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20260810\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-27 20:24+0000\n"
+"PO-Revision-Date: 2026-08-27 20:24+0000\n"
+"Last-Translator: Flous Flow <info@flousflow.com>\n"
+"Language-Team: Flous Flow <info@flousflow.com>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/wizard/accounting_repair_wizard.py:0
+msgid "%(changed)s of %(total)s categories were updated."
+msgstr "تم تحديث %(changed)s من أصل %(total)s فئة."
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.view_category_property_form_ff_simplified
+msgid "Accounting"
+msgstr "المحاسبة"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.actions.act_window,name:ff_simplified_inventory_accounting.action_ff_migration_wizard
+#: model:ir.model,name:ff_simplified_inventory_accounting.model_ff_accounting_migration_wizard
+#: model:ir.ui.menu,name:ff_simplified_inventory_accounting.menu_ff_migration
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.ff_accounting_migration_wizard_form
+msgid "Accounting / Valuation Migration"
+msgstr "ترحيل المحاسبة / التقييم"
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/wizard/accounting_migration_wizard.py:0
+msgid "Accounting Migration"
+msgstr "ترحيل المحاسبة"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_product_category__ff_accounting_status
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.product_category_list_view_ff_simplified
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.product_category_search_view_ff_simplified
+msgid "Accounting Status"
+msgstr "حالة المحاسبة"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+msgid "Advanced Technical Configuration"
+msgstr "الإعدادات التقنية المتقدمة"
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/models/res_config_settings.py:0
+msgid ""
+"All technical inventory accounts and the stock journal are already "
+"configured for company %(company)s."
+msgstr ""
+"جميع حسابات المخزون التقنية ودفتر يومية المخزون مكوّنة بالفعل لشركة "
+"%(company)s."
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.actions.act_window,name:ff_simplified_inventory_accounting.action_ff_repair_wizard
+#: model:ir.model,name:ff_simplified_inventory_accounting.model_ff_accounting_repair_wizard
+#: model:ir.ui.menu,name:ff_simplified_inventory_accounting.menu_ff_repair
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.ff_accounting_repair_wizard_form
+msgid "Apply Simplified Accounting to Existing Categories"
+msgstr "تطبيق محاسبة المخزون المبسطة على الفئات الحالية"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields.selection,name:ff_simplified_inventory_accounting.selection__ff_accounting_migration_wizard__target_valuation__real_time
+msgid "Automated"
+msgstr "تلقائي"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,help:ff_simplified_inventory_accounting.field_res_company__ff_simplified_inventory_accounting
+#: model:ir.model.fields,help:ff_simplified_inventory_accounting.field_res_config_settings__ff_simplified_inventory_accounting
+msgid ""
+"Automatically configure inventory accounting for product categories. Users "
+"only need to select Sales and Cost of Goods Sold accounts on each category."
+msgstr ""
+"قم بتكوين محاسبة المخزون تلقائيًا لفئات المنتجات. يحتاج المستخدمون فقط إلى "
+"تحديد حساب المبيعات وتكلفة البضاعة المباعة لكل فئة."
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+msgid ""
+"Automatically configure inventory accounting for product categories. Users "
+"only need to select Sales and Cost of Goods Sold accounts."
+msgstr ""
+"قم بتكوين محاسبة المخزون تلقائيًا لفئات المنتجات. يحتاج المستخدمون فقط إلى "
+"تحديد حساب المبيعات وتكلفة البضاعة المباعة."
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields.selection,name:ff_simplified_inventory_accounting.selection__ff_accounting_migration_wizard__target_cost_method__average
+#: model:ir.model.fields.selection,name:ff_simplified_inventory_accounting.selection__res_company__ff_default_cost_method__average
+msgid "Average Cost (AVCO)"
+msgstr "متوسط التكلفة (AVCO)"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_tree
+msgid "COGS Account"
+msgstr "حساب تكلفة البضاعة المباعة"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.ff_accounting_migration_wizard_form
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.ff_accounting_repair_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_migration_wizard__category_ids
+msgid "Categories to migrate"
+msgstr "الفئات المطلوب ترحيلها"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model,name:ff_simplified_inventory_accounting.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/models/res_config_settings.py:0
+msgid ""
+"Company %(company)s already has a complete simplified inventory "
+"configuration. Nothing to initialize."
+msgstr ""
+"شركة %(company)s لديها بالفعل إعداد محاسبة مخزون مبسطة كامل. لا يوجد ما يلزم"
+" تهيئته."
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model,name:ff_simplified_inventory_accounting.model_res_config_settings
+msgid "Config Settings"
+msgstr "إعدادات التكوين"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_repair_wizard__configured_count
+#: model:ir.model.fields.selection,name:ff_simplified_inventory_accounting.selection__product_category__ff_accounting_status__configured
+msgid "Configured"
+msgstr "مكتمل التكوين"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+msgid ""
+"Configured once per company. Applied automatically to every product "
+"category."
+msgstr "يتم تكوينه مرة واحدة لكل شركة. يُطبَّق تلقائيًا على كل فئة منتجات."
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.view_category_property_form_ff_simplified
+msgid "Cost of Goods Sold"
+msgstr "تكلفة البضاعة المباعة"
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/wizard/accounting_migration_wizard.py:0
+msgid "Costing / valuation method changed for %(count)s categories."
+msgstr "تم تغيير طريقة التكلفة / التقييم لعدد %(count)s فئات."
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_tree
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.view_category_property_form_ff_simplified
+msgid "Costing Method"
+msgstr "طريقة التكلفة"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,help:ff_simplified_inventory_accounting.field_res_company__ff_stock_input_account_id
+#: model:ir.model.fields,help:ff_simplified_inventory_accounting.field_res_config_settings__ff_stock_input_account_id
+msgid ""
+"Counterpart journal items for all incoming stock moves are posted in this "
+"account."
+msgstr "تُرحَّل القيود المقابلة لجميع حركات المخزون الواردة في هذا الحساب."
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,help:ff_simplified_inventory_accounting.field_res_company__ff_stock_output_account_id
+#: model:ir.model.fields,help:ff_simplified_inventory_accounting.field_res_config_settings__ff_stock_output_account_id
+msgid ""
+"Counterpart journal items for all outgoing stock moves are posted in this "
+"account."
+msgstr "تُرحَّل القيود المقابلة لجميع حركات المخزون الصادرة في هذا الحساب."
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+msgid "Create Technical Inventory Accounts"
+msgstr "إنشاء حسابات المخزون التقنية"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_migration_wizard__create_uid
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_repair_wizard__create_uid
+msgid "Created by"
+msgstr "أُنشئ بواسطة"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_migration_wizard__create_date
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_repair_wizard__create_date
+msgid "Created on"
+msgstr "أُنشئ في"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields.selection,name:ff_simplified_inventory_accounting.selection__product_category__ff_accounting_status__custom
+msgid "Custom"
+msgstr "مخصص"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_search
+msgid "Custom Accounting"
+msgstr "محاسبة مخصصة"
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/models/res_company.py:0
+#: code:addons/ff_simplified_inventory_accounting/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_res_company__ff_default_cogs_account_id
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_res_config_settings__ff_default_cogs_account_id
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.view_company_form_ff_simplified
+msgid "Default Cost of Goods Sold Account"
+msgstr "حساب تكلفة البضاعة المباعة الافتراضي"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_res_company__ff_default_cost_method
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_res_config_settings__ff_default_cost_method
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.view_company_form_ff_simplified
+msgid "Default Costing Method"
+msgstr "طريقة التكلفة الافتراضية"
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/models/res_company.py:0
+#: code:addons/ff_simplified_inventory_accounting/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_res_company__ff_default_income_account_id
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_res_config_settings__ff_default_income_account_id
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.view_company_form_ff_simplified
+msgid "Default Sales Account"
+msgstr "حساب المبيعات الافتراضي"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,help:ff_simplified_inventory_accounting.field_res_company__ff_default_cost_method
+#: model:ir.model.fields,help:ff_simplified_inventory_accounting.field_res_config_settings__ff_default_cost_method
+msgid ""
+"Default costing method applied to newly created product categories when "
+"simplified inventory accounting is enabled."
+msgstr ""
+"طريقة التكلفة الافتراضية المطبقة على فئات المنتجات المنشأة حديثًا عند تفعيل "
+"محاسبة المخزون المبسطة."
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_repair_wizard__diff_cost_method_count
+msgid "Different Costing Method"
+msgstr "طريقة تكلفة مختلفة"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_migration_wizard__display_name
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_repair_wizard__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+msgid "Enable Simplified Inventory Accounting"
+msgstr "تفعيل محاسبة المخزون المبسطة"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,help:ff_simplified_inventory_accounting.field_res_company__ff_default_cogs_account_id
+#: model:ir.model.fields,help:ff_simplified_inventory_accounting.field_res_config_settings__ff_default_cogs_account_id
+msgid ""
+"Expense / COGS for products in categories using the simplified inventory "
+"accounting will use this account by default unless overridden on the "
+"category or product."
+msgstr ""
+"ستستخدم المصروفات / تكلفة البضاعة المباعة للمنتجات في الفئات التي تستخدم "
+"محاسبة المخزون المبسطة هذا الحساب افتراضيًا ما لم يتم تجاوزه في الفئة أو "
+"المنتج."
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields.selection,name:ff_simplified_inventory_accounting.selection__ff_accounting_migration_wizard__target_cost_method__fifo
+#: model:ir.model.fields.selection,name:ff_simplified_inventory_accounting.selection__res_company__ff_default_cost_method__fifo
+msgid "First In First Out (FIFO)"
+msgstr "الوارد أولًا يصرف أولًا (FIFO)"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_search
+msgid "Health Check"
+msgstr "فحص الصحة"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_search
+msgid "Healthy"
+msgstr "سليم"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_migration_wizard__id
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_repair_wizard__id
+msgid "ID"
+msgstr "المعرّف"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.actions.act_window,name:ff_simplified_inventory_accounting.action_inventory_accounting_health
+#: model:ir.ui.menu,name:ff_simplified_inventory_accounting.menu_ff_inventory_health
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_search
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_tree
+msgid "Inventory Accounting Health Check"
+msgstr "فحص سلامة محاسبة المخزون"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_tree
+msgid "Inventory Valuation"
+msgstr "تقييم المخزون"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+msgid ""
+"Inventory valuation and stock interim accounts are\n"
+"                                managed automatically by the company accounting\n"
+"                                settings."
+msgstr ""
+"تتم إدارة تقييم المخزون وحسابات المخزون المؤقتة تلقائيًا من خلال إعدادات "
+"المحاسبة للشركة."
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.view_category_property_form_ff_simplified
+msgid ""
+"Inventory valuation and stock interim accounts are managed\n"
+"                        automatically by the company accounting settings."
+msgstr ""
+"تتم إدارة تقييم المخزون وحسابات المخزون المؤقتة تلقائيًا من خلال إعدادات "
+"المحاسبة للشركة."
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_migration_wizard__write_uid
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_repair_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_migration_wizard__write_date
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_repair_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_migration_wizard__lot_valuated_count
+msgid "Lot/Serial Valuated Products"
+msgstr "المنتجات المقيمة بالدفعات/الأرقام التسلسلية"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields.selection,name:ff_simplified_inventory_accounting.selection__ff_accounting_migration_wizard__target_valuation__manual_periodic
+msgid "Manual"
+msgstr "يدوي"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_repair_wizard__manual_valuation_count
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_search
+msgid "Manual Valuation"
+msgstr "تقييم يدوي"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.ff_accounting_migration_wizard_form
+msgid "Migrate"
+msgstr "ترحيل"
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/wizard/accounting_migration_wizard.py:0
+msgid ""
+"Migration is blocked for category %(category)s: %(count)s product(s) are "
+"valuated by lot/serial number with existing valuation layers."
+msgstr ""
+"الترحيل محظور للفئة %(category)s: يوجد %(count)s منتجًا مقيمًا "
+"بالدفعات/الأرقام التسلسلية مع طبقات تقييم قائمة."
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/wizard/accounting_migration_wizard.py:0
+msgid ""
+"Migration is blocked: %(count)s product(s) are valuated by lot/serial number"
+" with existing valuation layers. Odoo cannot change the costing method of "
+"such products. Remove the valuation layers or change these products to non-"
+"lot valuation first."
+msgstr ""
+"الترحيل محظور: يوجد %(count)s منتجًا مقيمًا بالدفعات/الأرقام التسلسلية مع "
+"طبقات تقييم قائمة. لا يمكن لأودو تغيير طريقة التكلفة لهذه المنتجات. احذف "
+"طبقات التقييم أو حوّل هذه المنتجات إلى تقييم غير مرتبط بالدفعات أولًا."
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/wizard/accounting_migration_wizard.py:0
+msgid ""
+"Migration will be performed by Odoo: the current stock (%(qty)s units, "
+"%(svl)s valuation layers) will be emptied and replenished with the new "
+"method, generating the corresponding journal entries."
+msgstr ""
+"سيتم تنفيذ الترحيل بواسطة أودو: سيتم تفريغ المخزون الحالي (%(qty)s وحدة، "
+"%(svl)s طبقة تقييم) وإعادة تزويده بالطريقة الجديدة، مع إنشاء قيود اليومية "
+"المقابلة."
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_search
+msgid "Missing COGS"
+msgstr "تكلفة البضاعة المباعة ناقصة"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_repair_wizard__missing_expense_count
+msgid "Missing COGS Account"
+msgstr "حساب تكلفة البضاعة المباعة ناقص"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_search
+msgid "Missing Sales"
+msgstr "المبيعات ناقصة"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_repair_wizard__missing_income_count
+msgid "Missing Sales Account"
+msgstr "حساب المبيعات ناقص"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_repair_wizard__missing_input_count
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_search
+msgid "Missing Stock Input"
+msgstr "حساب البضاعة الواردة ناقص"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_repair_wizard__missing_journal_count
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_search
+msgid "Missing Stock Journal"
+msgstr "دفتر يومية المخزون ناقص"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_repair_wizard__missing_output_count
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_search
+msgid "Missing Stock Output"
+msgstr "حساب البضاعة الصادرة ناقص"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_repair_wizard__missing_valuation_count
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_search
+msgid "Missing Stock Valuation"
+msgstr "حساب تقييم المخزون ناقص"
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/wizard/accounting_migration_wizard.py:0
+msgid ""
+"No current stock for the selected categories. The migration will only change"
+" the category properties."
+msgstr ""
+"لا يوجد مخزون حالي للفئات المحددة. سيقوم الترحيل بتغيير خصائص الفئات فقط."
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/models/res_config_settings.py:0
+msgid ""
+"No product category with automated valuation was found for company "
+"%(company)s. Configure the technical accounts manually."
+msgstr ""
+"لم يتم العثور على فئة منتجات بتقييم تلقائي لشركة %(company)s. قم بإعداد "
+"الحسابات التقنية يدويًا."
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model,name:ff_simplified_inventory_accounting.model_product_category
+msgid "Product Category"
+msgstr "فئة المنتج"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_migration_wizard__products_count
+msgid "Products"
+msgstr "المنتجات"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_repair_wizard__repair_info
+msgid "Repair Plan"
+msgstr "خطة الإصلاح"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.ff_accounting_repair_wizard_form
+msgid "Repair plan"
+msgstr "خطة الإصلاح"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,help:ff_simplified_inventory_accounting.field_res_company__ff_default_income_account_id
+#: model:ir.model.fields,help:ff_simplified_inventory_accounting.field_res_config_settings__ff_default_income_account_id
+msgid ""
+"Revenue from products in categories using the simplified inventory "
+"accounting will use this account by default unless overridden on the "
+"category or product."
+msgstr ""
+"ستستخدم إيرادات المنتجات في الفئات التي تستخدم محاسبة المخزون المبسطة هذا "
+"الحساب افتراضيًا ما لم يتم تجاوزه في الفئة أو المنتج."
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.view_category_property_form_ff_simplified
+msgid ""
+"Revenue from products in this category will use this account unless "
+"overridden on the product."
+msgstr ""
+"ستستخدم إيرادات المنتجات في هذه الفئة هذا الحساب ما لم يتم تجاوزه في المنتج."
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.ff_accounting_repair_wizard_form
+msgid "Run Safe Accounting Repair"
+msgstr "تشغيل الإصلاح المحاسبي الآمن"
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/wizard/accounting_repair_wizard.py:0
+msgid "Safe Accounting Repair"
+msgstr "الإصلاح المحاسبي الآمن"
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/wizard/accounting_repair_wizard.py:0
+msgid ""
+"Safe repair will:\n"
+"- Fill missing Sales / COGS accounts (company defaults, keeping native category inheritance).\n"
+"- Fill missing technical stock accounts from the company configuration.\n"
+"- Never change the costing method or the valuation method.\n"
+"- Preserve intentionally selected category Sales / COGS accounts."
+msgstr ""
+"سيقوم الإصلاح الآمن بما يلي:\n"
+"- ملء حسابات المبيعات / تكلفة البضاعة المباعة الناقصة (الافتراضيات الخاصة بالشركة، مع الحفاظ على التوريث الأصلي للفئات).\n"
+"- ملء حسابات المخزون التقنية الناقصة من إعداد الشركة.\n"
+"- عدم تغيير طريقة التكلفة أو طريقة التقييم أبدًا.\n"
+"- الحفاظ على حسابات المبيعات / تكلفة البضاعة المباعة المحددة عمدًا للفئة."
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_migration_wizard__migration_safe
+msgid "Safe to migrate"
+msgstr "آمن للترحيل"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_migration_wizard__safety_message
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.ff_accounting_migration_wizard_form
+msgid "Safety check"
+msgstr "فحص الأمان"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_tree
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.view_category_property_form_ff_simplified
+msgid "Sales Account"
+msgstr "حساب المبيعات"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.view_category_property_form_ff_simplified
+msgid "Sales Revenue"
+msgstr "إيرادات المبيعات"
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/wizard/accounting_migration_wizard.py:0
+msgid "Select a target costing method or valuation method before migrating."
+msgstr "حدد طريقة تكلفة أو طريقة تقييم مستهدفة قبل الترحيل."
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/wizard/accounting_migration_wizard.py:0
+msgid ""
+"Select at least one category and a target costing method or valuation "
+"method."
+msgstr "حدد فئة واحدة على الأقل وطريقة تكلفة أو طريقة تقييم مستهدفة."
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_res_company__ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_res_config_settings__ff_simplified_inventory_accounting
+#: model:ir.ui.menu,name:ff_simplified_inventory_accounting.menu_ff_simplified_container
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.view_company_form_ff_simplified
+msgid "Simplified Inventory Accounting"
+msgstr "محاسبة المخزون المبسطة"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_product_category__ff_simplified_enabled
+msgid "Simplified Inventory Accounting Enabled"
+msgstr "محاسبة المخزون المبسطة مفعّلة"
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/models/res_config_settings.py:0
+msgid ""
+"Simplified Inventory Accounting cannot be enabled because the following "
+"required values are missing for company %(company)s: %(fields)s."
+msgstr ""
+"لا يمكن تفعيل محاسبة المخزون المبسطة لأن القيم المطلوبة التالية ناقصة لشركة "
+"%(company)s: %(fields)s."
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/models/res_company.py:0
+msgid ""
+"Simplified Inventory Accounting cannot be enabled because the following "
+"required values are missing: %(fields)s."
+msgstr ""
+"لا يمكن تفعيل محاسبة المخزون المبسطة لأن القيم المطلوبة التالية ناقصة: "
+"%(fields)s."
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields.selection,name:ff_simplified_inventory_accounting.selection__ff_accounting_migration_wizard__target_cost_method__standard
+#: model:ir.model.fields.selection,name:ff_simplified_inventory_accounting.selection__res_company__ff_default_cost_method__standard
+msgid "Standard Price"
+msgstr "السعر القياسي"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_search
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_tree
+msgid "Status"
+msgstr "الحالة"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_tree
+msgid "Stock Input"
+msgstr "البضاعة الواردة"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+msgid "Stock Interim Delivered"
+msgstr "بضاعة صادرة مؤقتًا"
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/models/res_company.py:0
+#: code:addons/ff_simplified_inventory_accounting/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_res_company__ff_stock_output_account_id
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_res_config_settings__ff_stock_output_account_id
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.view_company_form_ff_simplified
+msgid "Stock Interim Delivered Account"
+msgstr "حساب البضاعة الصادرة مؤقتًا"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+msgid "Stock Interim Received"
+msgstr "بضاعة واردة مؤقتًا"
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/models/res_company.py:0
+#: code:addons/ff_simplified_inventory_accounting/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_res_company__ff_stock_input_account_id
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_res_config_settings__ff_stock_input_account_id
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.view_company_form_ff_simplified
+msgid "Stock Interim Received Account"
+msgstr "حساب البضاعة الواردة مؤقتًا"
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/models/res_company.py:0
+#: code:addons/ff_simplified_inventory_accounting/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_res_company__ff_stock_journal_id
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_res_config_settings__ff_stock_journal_id
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_tree
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.view_company_form_ff_simplified
+msgid "Stock Journal"
+msgstr "دفتر يومية المخزون"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_tree
+msgid "Stock Output"
+msgstr "البضاعة الصادرة"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.inventory_accounting_health_tree
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+msgid "Stock Valuation"
+msgstr "تقييم المخزون"
+
+#. module: ff_simplified_inventory_accounting
+#. odoo-python
+#: code:addons/ff_simplified_inventory_accounting/models/res_company.py:0
+#: code:addons/ff_simplified_inventory_accounting/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_res_company__ff_stock_valuation_account_id
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_res_config_settings__ff_stock_valuation_account_id
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.view_company_form_ff_simplified
+msgid "Stock Valuation Account"
+msgstr "حساب تقييم المخزون"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_migration_wizard__svl_count
+msgid "Stock Valuation Layers"
+msgstr "طبقات تقييم المخزون"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_migration_wizard__target_cost_method
+msgid "Target Costing Method"
+msgstr "طريقة التكلفة المستهدفة"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_migration_wizard__target_valuation
+msgid "Target Valuation Method"
+msgstr "طريقة التقييم المستهدفة"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.view_category_property_form_ff_simplified
+msgid ""
+"This is the category expense / COGS account used by Odoo's standard "
+"accounting logic."
+msgstr ""
+"هذا هو حساب مصروفات / تكلفة البضاعة المباعة للفئة المستخدم في منطق المحاسبة "
+"القياسي لأودو."
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_repair_wizard__total_categories
+msgid "Total Categories"
+msgstr "إجمالي الفئات"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,field_description:ff_simplified_inventory_accounting.field_ff_accounting_migration_wizard__stock_quantity
+msgid "Total Stock Quantity"
+msgstr "إجمالي كمية المخزون"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+msgid "Use Existing Inventory Accounting Configuration"
+msgstr "استخدام إعداد محاسبة المخزون الحالي"
+
+#. module: ff_simplified_inventory_accounting
+#: model_terms:ir.ui.view,arch_db:ff_simplified_inventory_accounting.res_config_settings_view_form_ff_simplified
+msgid "User Defaults"
+msgstr "الإعدادات الافتراضية للمستخدم"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields.selection,name:ff_simplified_inventory_accounting.selection__product_category__ff_accounting_status__warning
+msgid "Warning"
+msgstr "تحذير"
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,help:ff_simplified_inventory_accounting.field_res_company__ff_stock_valuation_account_id
+#: model:ir.model.fields,help:ff_simplified_inventory_accounting.field_res_config_settings__ff_stock_valuation_account_id
+msgid ""
+"When automated inventory valuation is enabled, this account holds the "
+"current value of the products."
+msgstr ""
+"عند تفعيل التقييم التلقائي للمخزون، يحتفظ هذا الحساب بالقيمة الحالية "
+"للمنتجات."
+
+#. module: ff_simplified_inventory_accounting
+#: model:ir.model.fields,help:ff_simplified_inventory_accounting.field_res_company__ff_stock_journal_id
+#: model:ir.model.fields,help:ff_simplified_inventory_accounting.field_res_config_settings__ff_stock_journal_id
+msgid ""
+"When doing automated inventory valuation, this is the accounting journal in "
+"which entries are automatically posted when stock moves are processed."
+msgstr ""
+"عند إجراء تقييم المخزون التلقائي، هذا هو دفتر اليومية الذي تُرحَّل فيه "
+"القيود تلقائيًا عند معالجة حركات المخزون."
